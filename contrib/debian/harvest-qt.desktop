@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Harvest
+Comment=Harvest P2P Cryptocurrency
+Comment[fr]=Harvest, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Harvest, eşten eşe kriptografik sanal para birimi
+Exec=harvest-qt %u
+Terminal=false
+Type=Application
+Icon=harvest128
+MimeType=x-scheme-handler/harvest;
+Categories=Office;Finance;

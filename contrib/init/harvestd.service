@@ -1,0 +1,26 @@
+[Unit]
+Description=Harvest's distributed currency daemon
+After=network.target
+
+[Service]
+User=harvest
+Group=harvest
+
+Type=forking
+PIDFile=/var/lib/harvestd/harvestd.pid
+
+ExecStart=/usr/bin/harvestd -daemon -pid=/var/lib/harvestd/harvestd.pid \
+          -conf=/etc/harvest/harvest.conf -datadir=/var/lib/harvestd
+
+ExecStop=-/usr/bin/harvest-cli -conf=/etc/harvest/harvest.conf \
+         -datadir=/var/lib/harvestd stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

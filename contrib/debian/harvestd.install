@@ -1,0 +1,2 @@
+usr/local/bin/harvestd usr/bin
+usr/local/bin/harvest-cli usr/bin
