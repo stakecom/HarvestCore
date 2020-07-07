@@ -55,15 +55,6 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
     (0, uint256("0x00000411b071bf797fa4c3b9c2c22814e9f7fe29f5e4c63e1eaa7898e46dddcc"))
-    (1, uint256("0x00000dc90d07d2edc5d9827fadf2c13b5ed14268d07500900b549caa6d1fa195"))
-    (289, uint256("0x543db45e7cb74b9fd9fe40512d50fd93e6fa7693997e4e40cf429b16c00e03a3"))
-    (1158, uint256("0x0e89bb08728c5a0c4bc0916111b82d94bb4aae396fff37d1fe3654d05ba286cb"))
-    (6716, uint256("0x4941c86b51bf26bf23df144160996641270107e7c5b6f5a56d5b54f7c90f11ff"))
-    (10122, uint256("0xc278332ef31a36c7db7f1c2c4d550f80c29f74f8f2d65826e532cb144cdacd52"))
-    (13109, uint256("0xae2cca0984fe5b56fd933101f79092c596e73378d483fbd692885e1c52860252"))
-    (13132, uint256("0xa7f18fb034a897764f34bb039cc5c2eae1b2989575cd16184387258004dffec0"))
-    (13173, uint256("0x2b0d8c07d16b5a2c96c7dc0d220ffb21e734ca59c56c0e8ba0986328df93139e"))
-    (13201, uint256("0x8c799f2755af9cdd82c8d641214e29ff28db5ed2d514d20f0e71e0a89b5c36b2"))
 
 ;
 static const Checkpoints::CCheckpointData data = {
@@ -183,13 +174,12 @@ public:
         assert(hashGenesisBlock == uint256("0x00000411b071bf797fa4c3b9c2c22814e9f7fe29f5e4c63e1eaa7898e46dddcc"));
         assert(genesis.hashMerkleRoot == uint256("0xb6d36f4a0c17076f5c68a662e801b59f7af530c98d27ff59371102a615deb965"));
 
-        vSeeds.push_back(CDNSSeedData("0", "107.170.198.173"));
-		vSeeds.push_back(CDNSSeedData("1", "192.81.214.238"));
-		vSeeds.push_back(CDNSSeedData("2", "159.203.35.209"));
-		vSeeds.push_back(CDNSSeedData("3", "159.203.97.37"));
-		vSeeds.push_back(CDNSSeedData("4", "159.89.151.78"));
-		vSeeds.push_back(CDNSSeedData("5", "46.101.78.34"));
-		
+//FIXME akuma
+        vSeeds.push_back(CDNSSeedData("node1", "45.249.244.140"));
+        vSeeds.push_back(CDNSSeedData("node2", "152.32.169.75"));
+        vSeeds.push_back(CDNSSeedData("node3", "47.75.14.207"));
+
+	
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 40);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 85);
         base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 153);
