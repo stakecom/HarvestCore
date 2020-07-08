@@ -479,14 +479,15 @@ CBlockTemplate* CreateNewBlock(const CScript& scriptPubKeyIn, CWallet* pwallet, 
 		}
 		pblock->nAccumulatorCheckpoint = pCheckpointCache.second.second;
 		pblocktemplate->vTxSigOps[0] = GetLegacySigOpCount(pblock->vtx[0]);
-
+//FIXME akuma
+/*
 		CValidationState state;
 		if (!TestBlockValidity(state, *pblock, pindexPrev, false, false)) {
 			LogPrintf("CreateNewBlock() : TestBlockValidity failed\n");
 			mempool.clear();
 			return NULL;
 		}
-
+*/
 		//        if (pblock->IsZerocoinStake()) {
 		//            CWalletTx wtx(pwalletMain, pblock->vtx[1]);
 		//            pwalletMain->AddToWallet(wtx);

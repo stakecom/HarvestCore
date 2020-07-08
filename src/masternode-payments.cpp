@@ -341,6 +341,9 @@ void CMasternodePayments::FillBlockPayee(CMutableTransaction& txNew, int64_t nFe
         CBitcoinAddress address2(address1);
 
         LogPrint("masternode","Masternode payment of %s to %s\n", FormatMoney(masternodePayment).c_str(), address2.ToString().c_str());
+//FIXED akuma
+    } else {
+	txNew.vout[0].nValue = blockValue;
     }
 }
 
